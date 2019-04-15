@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/inicio">
+
+    <fragment android:id="@+id/inicio" android:name="com.example.meetguatemala.Inicio" android:label="Inicio"
+              tools:layout="@layout/inicio">
+        <action android:id="@+id/action_inicio_to_lugar1" app:destination="@id/lugar1"/>
+        <action android:id="@+id/action_inicio_to_lugar2" app:destination="@id/lugar2"/>
+        <action android:id="@+id/action_inicio_to_lugar3" app:destination="@id/lugar3"/>
+    </fragment>
+    <fragment android:id="@+id/lugar1" android:name="com.example.meetguatemala.Lugar1" android:label="Antigua"
+              tools:layout="@layout/meetantigua">
+        <action android:id="@+id/action_lugar1_to_sharecomment" app:destination="@id/sharecomment"/>
+    </fragment>
+    <fragment android:id="@+id/lugar2" android:name="com.example.meetguatemala.Lugar2" android:label="Tikal"
+              tools:layout="@layout/meettikal">
+        <action android:id="@+id/action_lugar2_to_sharecomment" app:destination="@id/sharecomment"/>
+    </fragment>
+    <fragment android:id="@+id/lugar3" android:name="com.example.meetguatemala.Lugar3" android:label="Atitlan"
+              tools:layout="@layout/meetatitlan">
+        <action android:id="@+id/action_lugar3_to_sharecomment" app:destination="@id/sharecomment"/>
+    </fragment>
+    <fragment android:id="@+id/sharecomment" android:name="com.example.meetguatemala.Sharecomment"
+              android:label="Compartir"
+              tools:layout="@layout/fragment_sharecomment"/>
+    <fragment android:id="@+id/about" android:name="com.example.meetguatemala.About" android:label="Acercade"
+              tools:layout="@layout/fragment_about">
+        <deepLink android:id="@+id/deepLink3" app:uri="http://guatemala-myapp.com"/>
+    </fragment>
+</navigation>
